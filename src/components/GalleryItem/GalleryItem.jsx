@@ -11,15 +11,21 @@ function GalleryItem({ pic, addLikes }) {
   };
 
   return (
-    <div
-      className="imageStore"
-      key={pic.id}
-      onClick={() => setOnClick(onClick + 1)}
-    >
-      {onClickHandle()};
-      <button onClick={addLikes} id={pic.id}>
-        LIKE
-      </button>
+    <div className="pics">
+      {' '}
+      <div
+        className="imageStore"
+        key={pic.id}
+        onClick={() => setOnClick(onClick + 1)}
+      >
+        {onClickHandle()}{' '}
+      </div>
+      <div>
+        {' '}
+        <button onClick={addLikes} id={pic.id}>
+          LIKE
+        </button>{' '}
+      </div>
       <div>{pic.likes} people liked this!</div>
     </div>
   );

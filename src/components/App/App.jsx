@@ -34,6 +34,7 @@ function App() {
         console.log('PUT error', error);
       });
   };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -43,5 +44,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
