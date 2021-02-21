@@ -21,13 +21,25 @@ function App() {
         console.log('GET error:', error);
       });
   }; // end fetchData
-
+  const addLikes = (evt) => {
+    const picId = evt.target.dataset.id;
+    console.log(picId);
+    axios
+      .put(`/gallery/like/${picId}`)
+      .then((response) => {
+        console.log('in adding likes', response);
+        fetchData();
+      })
+      .catch((error) => {
+        console.log('PUT error', error);
+      });
+  };
   return (
     <div className="App">
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
-      <GalleryList gallery={galleryList} />
+      <GalleryList gallery={galleryList} addLikes={addLikes} />
     </div>
   );
 }
