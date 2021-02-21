@@ -1,12 +1,15 @@
-function GalleryList() {
+function GalleryList({ gallery }) {
   return (
     <div>
-      <p>Gallery goes here</p>
-      <img src="images/goat_small.jpg" />
-      <img src="images/Kenya.jpg" id="resize" />
-      <img src="images/nephews.jpeg" id="resize" />
-      <img src="images/wings.jpg" id="resize" />
-      <img src="images/airplane.jpg" id="resize" />
+      {gallery.map((pic, index) => {
+        console.log(pic.path);
+        console.log(pic.id);
+        return (
+          <div className="resizing" key={pic.id}>
+            <img src={pic.path} />
+          </div>
+        );
+      })}
     </div>
   );
 }

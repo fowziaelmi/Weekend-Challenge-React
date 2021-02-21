@@ -13,7 +13,7 @@ const galleryItems = [
   },
   {
     id: 3,
-    path: 'images/nephews.jpg',
+    path: 'images/nephews.jpeg',
     description: 'Photo of my nephews.',
     likes: 0,
   },
