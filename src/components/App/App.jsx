@@ -22,7 +22,7 @@ function App() {
       });
   }; // end fetchData
   const addLikes = (evt) => {
-    const picId = evt.target.dataset.id;
+    const picId = evt.target.id;
     console.log(picId);
     axios
       .put(`/gallery/like/${picId}`)

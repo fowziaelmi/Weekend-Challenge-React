@@ -3,7 +3,9 @@ function GalleryItem({ pic, addLikes }) {
     <div className="imageStore" key={pic.id}>
       <img className="resizing" src={pic.path} />
       <div>{pic.description}</div>
-      <button onClick={addLikes}>LIKE</button>
+      <button onClick={addLikes} id={pic.id}>
+        LIKE
+      </button>
       <div>{pic.likes} people liked this!</div>
     </div>
   );
