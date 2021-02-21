@@ -13,7 +13,10 @@
   font-size: 1.5em;
 }
 
-#resize {
-  width: 100px;
-  height: 100px;
+.resizing {
+  width: 200px;
+  height: 200px;
+}
+.imageStore {
+  display: inline-block;
 }

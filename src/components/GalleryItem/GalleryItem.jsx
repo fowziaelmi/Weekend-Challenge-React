@@ -1,7 +1,9 @@
 function GalleryItem({ pic }) {
   return (
-    <div className="resizing" key={pic.id}>
-      <img src={pic.path} />
+    <div className="imageStore" key={pic.id}>
+      <img className="resizing" src={pic.path} />
+      <div>{pic.description}</div>
+      <button>LIKE</button>
     </div>
   );
 }
