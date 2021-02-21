@@ -1,17 +1,13 @@
+import GalleryItem from '../GalleryItem/GalleryItem.jsx';
+
 function GalleryList({ gallery }) {
   return (
     <div>
+      {' '}
       {gallery.map((pic, index) => {
-        console.log(pic.path);
-        console.log(pic.id);
-        return (
-          <div className="resizing" key={pic.id}>
-            <img src={pic.path} />
-          </div>
-        );
+        return <GalleryItem pic={pic} key={index} />;
       })}
     </div>
   );
 }
-
 export default GalleryList;
